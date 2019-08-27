@@ -1,0 +1,29 @@
+body {
+  font-family: 'Pacifico', cursive;
+  background-color: #FFFACD;
+}
+
+.form-img-dim {
+  width: 250px;
+  max-width: 100%;
+}
+
+.form-add-task {
+  .btn {
+    float: right;
+  }
+}
+
+header {
+  h1 {
+    width: 100%;
+  }
+}
+
+.task-comp-img, .task-todo-img {
+  width: 250px;
+  min-height: 300px;
+}
+.data-cont {
+  background-color: transparent;
+}
