@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import "./App.scss";
 import man from './assets/img/man.png';
 import Modal from 'react-bootstrap/Modal';
-import {Button, ModalHeader, ModalFooter, ModalTitle, ModalBody} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 
 const FormHandler = props => {
   return (<div className="row form-section border border-danger p-5 rounded">
@@ -28,7 +28,7 @@ const FormHandler = props => {
       </form>
     </div>
     <div className="col-sm-12 col-md-4 text-center">
-      <img src={man} className="form-img-dim"></img>
+      <img src={man} className="form-img-dim" alt="person-img"></img>
     </div>
   </div>);
 };
@@ -85,7 +85,6 @@ const Header = props => {
 };
 
 const UpdateTask = props => {
-  console.log(props);
   return (<div>
     <Modal show={props.show} onHide={props.handleCloseModel}>
       <Modal.Header closeButton="closeButton">
@@ -118,12 +117,16 @@ const UpdateTask = props => {
   </div>);
 };
 
+var curr = new Date();
+curr.setDate(curr.getDate());
+var date = curr.toISOString().substr(0,10);
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
       task: "",
-      date: 11 / 10 / 1995,
+      date: date,
       compStatus: 0,
       tasks: [],
       show: false,
@@ -142,6 +145,7 @@ class App extends Component {
     if (!data) {
       localStorage.setItem("localData", []);
     } else {
+      console.log(JSON.parse(data));
       this.setState({tasks: JSON.parse(data)});
     }
   }
