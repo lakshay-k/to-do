@@ -93,7 +93,7 @@ const Header = props => {
               <p>Spread the word</p>
               <ul>
                 <li>
-                  <a href="https://www.facebook.com/sharer/sharer.php?u=\http://todo.itslm.world/">
+                  <a href="http://www.facebook.com/share.php?u=http://todo.itslm.world">
                     <i class="fa fa-facebook-official" aria-hidden="true"></i>
                   </a>
                 </li>
