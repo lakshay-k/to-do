@@ -110,14 +110,14 @@ const UpdateTask = props => {
   return (<div>
     <Modal show={props.show} onHide={props.handleCloseModel}>
       <Modal.Header closeButton="closeButton">
-        <Modal.Title>Modal heading</Modal.Title>
+        <Modal.Title>Edit Task</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <form>
           <div className="form-group">
             <label>
               <h3>
-                <i>Task to do..</i>
+                Task to do
               </h3>
             </label>
             <textarea name="task" value={props.value.task} onChange={(e) => props.changeHandler(e, "task")} required="required" type="text" className="form-control" placeholder="Task to do"></textarea>
@@ -125,7 +125,7 @@ const UpdateTask = props => {
           <div className="form-group">
             <label>
               <h3>
-                <i>Complete By:</i>
+                Complete By:
               </h3>
             </label>
             <input name="date" type="date" value={props.value.date} onChange={(e) => props.changeHandler(e, "date")} required="required" className="form-control"/>
