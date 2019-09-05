@@ -70,7 +70,7 @@ const CompletedTasks = props => {
   return props.data.map((val, i) => {
     if (val.compStatus === 1) {
       return (<div className="card-body custom-card-wrapper mt-4" key={i}>
-        <span className="task-comp-box"><input type="checkbox" className="form-check-input" id="to-complete" onClick={e => props.taskIncomplete(e, i)}/></span>
+        <span className="task-comp-box"><input type="checkbox" className="form-check-input" id="to-complete" onClick={e => props.taskIncomplete(e, i)} checked/></span>
         <p className="card-due-desc">{val.task}</p>
         <span className="card-due-date">
           <p>Due Date:</p>{val.date}</span>
