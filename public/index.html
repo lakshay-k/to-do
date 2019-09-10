@@ -8,14 +8,13 @@
     <meta name="description" content="Application to keep track of your goals">
     <meta name="keywords" content="todo, list, task, list task, react">
     <meta name="robots" content="index, follow">
-    <link rel="apple-touch-icon" href="logo192.png" />
+    <link rel="apple-touch-icon" href="to-do-sharer.png" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
     <meta property="og:title" content="To Do App">
-<meta property="og:description" content="Application to keep track of your goals">
-<meta property="og:image" content="%PUBLIC_URL%/logo192.png">
+    <meta property="og:description" content="Application to keep track of your goals">
+    <meta property="og:image" content="%PUBLIC_URL%/to-do-sharer.png">
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -67,5 +66,25 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#config-web-app -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCrOURTZZ2ipDsZBK6ESJV2b4D4Mnx0JLs",
+      authDomain: "todo-168d4.firebaseapp.com",
+      databaseURL: "https://todo-168d4.firebaseio.com",
+      projectId: "todo-168d4",
+      storageBucket: "todo-168d4.appspot.com",
+      messagingSenderId: "141482094405",
+      appId: "1:141482094405:web:100a8edaee247bf140182c"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
   </body>
 </html>

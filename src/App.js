@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import "./App.scss";
-import man from './assets/img/man.png';
 import logo from './assets/img/logo.png';
 import Modal from 'react-bootstrap/Modal';
 import {Button} from 'react-bootstrap';
@@ -167,7 +166,6 @@ class App extends Component {
     if (!data) {
       localStorage.setItem("localData", []);
     } else {
-      console.log(JSON.parse(data));
       this.setState({tasks: JSON.parse(data)});
     }
   }
