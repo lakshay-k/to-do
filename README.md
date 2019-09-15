@@ -38,9 +38,11 @@ Please Visit [Prod Site](https://todo.itslm.world/)
 ### `Author`
 
 Github [Profile](https://github.com/lakshay-k/)
+<br/>
 Facebook [Profile](https://www.facebook.com/itslakshay)
 
 ### `Author's Inspiration`
 
 Mentor [Meenakshi](https://github.com/meenakshigupta489)
+<br/>
 Designer [Sahil](https://dribbble.com/sahilps108)
