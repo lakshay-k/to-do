@@ -7,7 +7,7 @@ import {Button} from 'react-bootstrap';
 const FormHandler = props => {
   return (<div className="form-section">
     <form onSubmit={props.handleSubmit} className="row form-add-task mt-5 p-4">
-      <div className="col-md-7 col-sm-12">
+      <div className="col-md-6 col-sm-12">
         <div className="form-group">
           <label>
             <h3>
@@ -17,7 +17,7 @@ const FormHandler = props => {
           <textarea name="task" required="required" type="text" className="form-control" placeholder="Task to do" value={props.task} onChange={e => props.handleChange(e, "task")}></textarea>
         </div>
       </div>
-      <div className="col-md-3 col-sm-12">
+      <div className="col-md-2 col-sm-12">
         <div className="form-group">
           <label>
             <h3>
@@ -25,6 +25,16 @@ const FormHandler = props => {
             </h3>
           </label>
           <input name="date" type="date" required="required" min={props.date} className="form-control" value={props.date} onChange={e => props.handleChange(e, "date")}/>
+        </div>
+      </div>
+      <div className="col-md-2 col-sm-12">
+        <div className="form-group">
+          <label>
+            <h3>
+              <i>Time:</i>
+            </h3>
+          </label>
+          <input name="time" type="time" className="form-control" value={props.time} onChange={e => props.handleChange(e, "time")} />
         </div>
       </div>
       <div className="col-md-2 col-sm-12 submit-container">
@@ -142,6 +152,12 @@ var curr = new Date();
 curr.setDate(curr.getDate());
 var date = curr.toISOString().substr(0, 10);
 
+var time = curr.getHours() + ":" + curr.getMinutes();
+function leading_zeros(curr) {
+  return (curr.getHours() < 10 ? '0' : '') + curr.getHours();
+}
+console.log(leading_zeros(curr));
+
 class App extends Component {
   constructor() {
     super();
@@ -152,7 +168,8 @@ class App extends Component {
       tasks: [],
       show: false,
       editValue: null,
-      edit: {}
+      edit: {},
+      time: time
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -177,8 +194,8 @@ class App extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const {tasks} = this.state;
-    tasks.push({task: this.state.task, date: this.state.date, compStatus: this.state.compStatus});
-    this.setState({tasks, task: "", date: date});
+    tasks.push({task: this.state.task, date: this.state.date, compStatus: this.state.compStatus, time: this.state.time});
+    this.setState({tasks, task: "", date: date, time: time});
     localStorage.setItem("localData", JSON.stringify(tasks));
   }
 
@@ -243,7 +260,7 @@ class App extends Component {
     return (<div>
       <Header/>
       <div className="container">
-        <FormHandler task={this.state.task} handleChange={this.handleChange} date={this.state.date} handleSubmit={this.handleSubmit}/>
+        <FormHandler task={this.state.task} handleChange={this.handleChange} date={this.state.date} time={this.state.time} handleSubmit={this.handleSubmit}/>
         <div className="row">
           <div className="col-sm-12 col-md-6 mt-5">
             <div className="to-do-heading">
