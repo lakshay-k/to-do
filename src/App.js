@@ -152,11 +152,13 @@ var curr = new Date();
 curr.setDate(curr.getDate());
 var date = curr.toISOString().substr(0, 10);
 
-var time = curr.getHours() + ":" + curr.getMinutes();
-function leading_zeros(curr) {
+function leading_zeros_hours(curr) {
   return (curr.getHours() < 10 ? '0' : '') + curr.getHours();
 }
-console.log(leading_zeros(curr));
+function leading_zeros_minutes(curr) {
+  return (curr.getMinutes() < 10 ? '0' : '') + curr.getMinutes();
+}
+var time = leading_zeros_hours(curr) + ":" + leading_zeros_minutes(curr);
 
 class App extends Component {
   constructor() {
