@@ -79,24 +79,27 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
 
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-       https://firebase.google.com/docs/web/setup#config-web-app -->
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
 
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyCrOURTZZ2ipDsZBK6ESJV2b4D4Mnx0JLs",
-      authDomain: "todo-168d4.firebaseapp.com",
-      databaseURL: "https://todo-168d4.firebaseio.com",
-      projectId: "todo-168d4",
-      storageBucket: "todo-168d4.appspot.com",
-      messagingSenderId: "141482094405",
-      appId: "1:141482094405:web:100a8edaee247bf140182c"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  </script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA_swD4mGLu2V2QfmZvTRpscScB6jlLHOU",
+    authDomain: "to-do-app-9216b.firebaseapp.com",
+    databaseURL: "https://to-do-app-9216b.firebaseio.com",
+    projectId: "to-do-app-9216b",
+    storageBucket: "to-do-app-9216b.appspot.com",
+    messagingSenderId: "326569108696",
+    appId: "1:326569108696:web:4b6d4b56f61069c94323ad",
+    measurementId: "G-DL3P3KMTG2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
   </body>
 </html>
