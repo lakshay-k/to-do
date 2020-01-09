@@ -50,7 +50,7 @@ const ToDolist = props => {
         <span className="card-due-date">
           <p>Due Date:</p>{val.date}</span>
         <Button className="edit-card-btn" onClick={(e) => props.handleEdit(e, i)}>
-          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+          <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
         </Button>
         <input type="button" className="del-card-btn" onClick={e => props.deleteItem(e, i)} name="button" value="X"/>
       </div>);
@@ -93,7 +93,7 @@ const Header = props => {
               <ul>
                 <li>
                   <a href="http://www.facebook.com/share.php?u=http://todo.itslm.world">
-                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <i className="fa fa-facebook-official" aria-hidden="true"></i>
                   </a>
                 </li>
               </ul>
