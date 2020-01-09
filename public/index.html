@@ -5,13 +5,16 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/logo192.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="logo192.png" />
+    <meta name="description" content="Application to keep track of your goals">
+    <meta name="keywords" content="todo, list, task, list task, react">
+    <meta name="robots" content="index, follow">
+    <link rel="apple-touch-icon" href="to-do-sharer.png" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta property="og:title" content="To Do App">
+    <meta property="og:description" content="Application to keep track of your goals">
+    <meta property="og:image" content="%PUBLIC_URL%/to-do-sharer.png">
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -27,10 +30,44 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>To Do App</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146797789-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-146797789-1');
+</script>
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("7k0yA8zIV7wKCjT1dIAqJ2cIwqjT3vhS");
+  analytics.page();
+  }}();
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2841770715064384",
+    enable_page_level_ads: true
+  });
+</script>
+<!-- Howuku Tracking Code -->
+<script>
+  (function(d){
+    var key = "35MbwXVxaRje6YgD6p1oNq",
+        e = d.createElement("script");
+    e.type = "text/javascript";
+    e.async = true;
+    e.src = "https://cdn.howuku.com/js/howu.js";
+    e.setAttribute("key", key);
+    d.getElementsByTagName("head")[0].appendChild(e);
+  })(document);
+</script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root" class="container"></div>
+    <div id="root"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -41,5 +78,28 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA_swD4mGLu2V2QfmZvTRpscScB6jlLHOU",
+    authDomain: "to-do-app-9216b.firebaseapp.com",
+    databaseURL: "https://to-do-app-9216b.firebaseio.com",
+    projectId: "to-do-app-9216b",
+    storageBucket: "to-do-app-9216b.appspot.com",
+    messagingSenderId: "326569108696",
+    appId: "1:326569108696:web:4b6d4b56f61069c94323ad",
+    measurementId: "G-DL3P3KMTG2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
   </body>
 </html>

@@ -1,29 +1,184 @@
-body {
-  font-family: 'Pacifico', cursive;
-  background-color: #FFFACD;
+header {
+  background-color: #ffffff;
+  padding-bottom: 10px !important;
 }
 
-.form-img-dim {
-  width: 250px;
-  max-width: 100%;
+.share-app {
+  color: #9BA6B3;
+
+  p {
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+
+  ul {
+    list-style-type: none;
+
+    i {
+      font-size: 20px;
+    }
+
+    a {
+      color: #9BA6B3;
+
+      &:hover {
+        color: blue;
+      }
+    }
+  }
+}
+
+body {
+  background-color: #F8F9FA;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .form-add-task {
-  .btn {
-    float: right;
+  align-items: center;
+  border: 1px solid #D6DADF;
+  background-color: #F2F4F6;
+
+  label h3 {
+    font-size: 12px;
+    color: #7E8E9D;
+    margin-bottom: 0;
+  }
+
+  input,
+  textarea {
+    height: 48px;
+  }
+
+  .submit-container {
+    input {
+      margin-top: 12px;
+      background-color: #46A9F0;
+      width: 100%;
+    }
   }
 }
 
-header {
-  h1 {
-    width: 100%;
+.to-do-heading {
+  background-color: #F2F4F6;
+  padding: 8px;
+
+  p {
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 }
 
-.task-comp-img, .task-todo-img {
-  width: 250px;
-  min-height: 300px;
+.custom-card-wrapper {
+  border-radius: 4px;
+  padding: 15px;
+  border: 1px solid #F2F4F6;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &:hover {
+    box-shadow: 0 3px 9px #4F5A67;
+    border: 1px solid #46A9F0;
+  }
 }
-.data-cont {
-  background-color: transparent;
+
+.form-check-input {
+  margin: 0;
+}
+
+.task-comp-box {
+  width: 20px;
+  height: 20px;
+}
+
+.edit-card-btn {
+  background-color: #ffffff;
+  border: 0;
+  color: #4F5A67;
+
+  i {
+    font-size: 20px;
+  }
+
+  &:hover {
+    background-color: #ffffff;
+    border: 0;
+    color: blue;
+  }
+}
+
+.del-card-btn {
+  padding: 0 6px;
+  border-radius: 50%;
+  font-size: 14px;
+  background-color: #F2F4F6;
+  cursor: pointer;
+
+  &:hover {
+    background-color: red;
+    color: #ffffff;
+  }
+}
+
+.card-due-date {
+  font-size: 15px;
+  color: #4F5A67;
+
+  p {
+    color: #9BA6B3;
+    margin-bottom: 2px;
+    font-size: 13px;
+  }
+}
+
+.card-due-desc {
+  max-width: 280px;
+  color: #4F5A67;
+}
+
+.not-found-cont {
+  text-align: center;
+
+  h2 {
+    font-size: 15px;
+  }
+}
+
+.modal-open {
+  .modal-content {
+    background-color: #F2F4F6;
+    color: #7E8E9D;
+
+    label {
+      margin-bottom: 0;
+
+      h3 {
+        margin: 0 0 8px;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .modal-dialog {
+    max-width: none;
+    width: 60%;
+  }
+
+  .modal-title {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .modal-header {
+    border-bottom: 0;
+    text-transform: uppercase;
+    font-size: bold;
+  }
 }
